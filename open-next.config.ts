@@ -3,16 +3,23 @@ const config = {
     override: {
       wrapper: "cloudflare-node",
       converter: "edge",
-      // Dummy overrides prevent the WORKER_SELF_REFERENCE service binding
-      // from being generated (which fails on first deploy when the worker
-      // doesn't exist yet). This site uses no ISR so these are safe.
+      proxyExternalRequest: "fetch",
       incrementalCache: "dummy",
       tagCache: "dummy",
       queue: "dummy",
     },
   },
+  edgeExternals: ["node:crypto"],
   middleware: {
     external: true,
+    override: {
+      wrapper: "cloudflare-edge",
+      converter: "edge",
+      proxyExternalRequest: "fetch",
+      incrementalCache: "dummy",
+      tagCache: "dummy",
+      queue: "dummy",
+    },
   },
 };
 
