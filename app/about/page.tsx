@@ -101,7 +101,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mobialive Credibility */}
+      {/* Organisers & Backing */}
       <section className="py-24 md:py-[160px] px-6 md:px-16 bg-[#100e08] relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 md:mb-24">
@@ -113,49 +113,70 @@ export default function AboutPage() {
               Five Years of Curating Excellence
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="p-10 md:p-12 glass-card rounded-xl border-t-2 border-[#C9A84C] energy-glow-gold transition-all duration-500">
+
+          {/* Organiser + TSSC cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+            <div className="p-10 md:p-12 glass-card rounded-xl border-t-2 border-[#C9A84C] hover:shadow-[0_0_30px_rgba(201,168,76,0.25)] transition-all duration-500">
               <div className="flex items-center gap-4 mb-8">
-                <span className="material-symbols-outlined text-[#e6c364] text-4xl">
-                  verified
-                </span>
-                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">
-                  5+ Years
-                </span>
+                <span className="material-symbols-outlined text-[#e6c364] text-4xl">verified</span>
+                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">5+ Years</span>
               </div>
               <p className="font-manrope text-[16px] leading-[1.6] text-[#d0c5b2]">
-                A legacy of organizing Tier-1 national expositions with a focus
-                on high-performance technical delivery and seamless user
-                experience.
+                A legacy of organizing Tier-1 national expositions with a focus on high-performance technical delivery.
               </p>
             </div>
             <div className="p-10 md:p-12 glass-card rounded-xl border-t-2 border-[#b9c4ff] transition-all duration-500">
               <div className="flex items-center gap-4 mb-8">
-                <span className="material-symbols-outlined text-[#b9c4ff] text-4xl">
-                  groups
-                </span>
-                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">
-                  50k+ Attendees
-                </span>
+                <span className="material-symbols-outlined text-[#b9c4ff] text-4xl">groups</span>
+                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">50k+</span>
               </div>
               <p className="font-manrope text-[16px] leading-[1.6] text-[#d0c5b2]">
-                Successfully bridging the gap between talent and industry
-                through curated networking and high-stakes competitions.
+                Attendees across curated networking events and high-stakes national competitions.
               </p>
             </div>
-            <div className="p-10 md:p-12 glass-card rounded-xl border-t-2 border-[#C9A84C] energy-glow-gold transition-all duration-500">
+            <div className="p-10 md:p-12 glass-card rounded-xl border-t-2 border-[#C9A84C] hover:shadow-[0_0_30px_rgba(201,168,76,0.25)] transition-all duration-500">
               <div className="flex items-center gap-4 mb-8">
-                <span className="material-symbols-outlined text-[#e6c364] text-4xl">
-                  apartment
-                </span>
-                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">
-                  Iconic Venues
-                </span>
+                <span className="material-symbols-outlined text-[#e6c364] text-4xl">apartment</span>
+                <span className="font-[var(--font-space-grotesk)] text-[32px] font-semibold text-white">Iconic Venues</span>
               </div>
               <p className="font-manrope text-[16px] leading-[1.6] text-[#d0c5b2]">
-                From international convention centers to elite tech parks, our
-                footprint is defined by prestigious locations.
+                From Bharat Mandapam to Yashobhumi — our footprint is defined by India&apos;s most prestigious spaces.
               </p>
+            </div>
+          </div>
+
+          {/* TSSC Government Backing — full-width highlight card */}
+          <div className="glass-card rounded-xl border border-[#b9c4ff]/20 p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center gap-8 relative overflow-hidden">
+            {/* blue glow accent */}
+            <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#1E90FF]/10 blur-3xl pointer-events-none" />
+            <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#1E90FF]/10 border border-[#1E90FF]/30 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[#1E90FF] text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                account_balance
+              </span>
+            </div>
+            <div className="flex-1">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <span className="font-[var(--font-space-grotesk)] text-[11px] tracking-[0.25em] uppercase font-bold text-[#1E90FF]">
+                  Government Backing
+                </span>
+                <span className="chip border-[#1E90FF]/25 bg-[#1E90FF]/8 text-[#b9c4ff]">Official Recognition</span>
+              </div>
+              <h3 className="font-[var(--font-space-grotesk)] text-2xl md:text-3xl font-bold text-white mb-2">
+                Backed by <span className="text-[#b9c4ff]">TSSC</span>
+              </h3>
+              <p className="font-manrope text-[16px] leading-[1.6] text-[#d0c5b2] max-w-2xl">
+                Axeleron Expo operates with the recognition and strategic support of the{" "}
+                <span className="text-white font-semibold">Telecom Sector Skill Council (TSSC)</span> — a Government of
+                India initiative under the National Skill Development Corporation. This backing ensures our
+                challenge aligns with national skilling and innovation mandates.
+              </p>
+            </div>
+            <div className="flex-shrink-0 text-right hidden md:block">
+              <p className="font-[var(--font-space-grotesk)] text-[11px] tracking-[0.2em] uppercase font-bold text-[#1E90FF]/60 mb-1">
+                Under
+              </p>
+              <p className="font-[var(--font-space-grotesk)] font-bold text-white text-lg">NSDC</p>
+              <p className="font-manrope text-xs text-[#d0c5b2] mt-1">Govt. of India</p>
             </div>
           </div>
         </div>

@@ -13,6 +13,41 @@ export default function Home() {
 
       <HeroSection />
 
+      {/* ── Organisers & Government Backing strip ── */}
+      <div className="border-y border-outline-variant/30 bg-surface-container-lowest py-6 px-6 md:px-margin-edge">
+        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-16">
+
+          {/* Label */}
+          <p className="label-caps text-outline whitespace-nowrap">Organised by</p>
+
+          {/* Urjionix • Mobialive */}
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-primary text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              business
+            </span>
+            <span className="font-space-grotesk font-bold text-on-surface tracking-tight text-lg">
+              Urjionix <span className="text-outline mx-1">•</span> Mobialive
+            </span>
+          </div>
+
+          {/* Divider */}
+          <div className="hidden sm:block w-px h-8 bg-outline-variant/50" />
+
+          {/* TSSC */}
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-[#1E90FF] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              account_balance
+            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="label-caps text-[#1E90FF] text-[10px]">Government Backed</span>
+              <span className="font-space-grotesk font-bold text-white tracking-tight">
+                TSSC <span className="text-outline font-normal text-sm">· NSDC, Govt. of India</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <DomainTracks />
 
       {/* Competition Structure */}
