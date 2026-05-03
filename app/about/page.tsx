@@ -22,8 +22,6 @@ export default function AboutPage() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk4Eaib55LLm1pA1WWThSyTMOLWtI95m1DDNBLhJfLv_PHLU5wM8CH9oj-gllWRBaBuA9oY2lFsvaVd21YIVjKWwONJBGSUJZ1OisP9Q-v7lYWmOSfyW-j1I73wAC2qMj8MIlP7rvzxir0YaIqhCx1raV9u3Or6aWwBN1TXw3DEP1azj-druiThfwpkuIICTbbvZRUXGE1xorEjy3TYQtWRc0yg_6bASR4v-CcLRH0cUPyWOH6i4RW-hyN5N1P2i7RqsP5GwF_fx9Y"
             alt="Futuristic city architecture"
             fill
-            sizes="100vw"
-            quality={90}
             className="object-cover"
             priority
           />
@@ -192,8 +190,6 @@ export default function AboutPage() {
               src="/bharathmandapum.webp"
               alt="Bharat Mandapam convention center"
               fill
-              sizes="(max-width: 768px) 100vw, 58vw"
-              quality={90}
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#16130d] via-transparent to-transparent opacity-90" />
@@ -212,8 +208,6 @@ export default function AboutPage() {
                 src="/yasho.webp"
                 alt="Yashobhumi conference hall"
                 fill
-                sizes="(max-width: 768px) 100vw, 42vw"
-                quality={90}
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#16130d]/80 to-transparent" />
