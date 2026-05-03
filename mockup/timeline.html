@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed": "#ffe08f",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#d0c5b2",
+                        "on-primary-container": "#503d00",
+                        "surface": "#16130d",
+                        "tertiary-container": "#9ba8eb",
+                        "tertiary": "#b9c4ff",
+                        "inverse-surface": "#e9e1d7",
+                        "on-tertiary-container": "#2e3b77",
+                        "surface-container-lowest": "#100e08",
+                        "on-secondary-container": "#b7b8bc",
+                        "tertiary-fixed": "#dde1ff",
+                        "surface-dim": "#16130d",
+                        "on-primary": "#3d2e00",
+                        "surface-container-highest": "#38342d",
+                        "on-secondary": "#2e3034",
+                        "on-tertiary-fixed": "#041451",
+                        "surface-tint": "#e6c364",
+                        "on-tertiary": "#1e2b66",
+                        "tertiary-fixed-dim": "#b9c3ff",
+                        "inverse-on-surface": "#343029",
+                        "outline-variant": "#4d4637",
+                        "surface-container": "#221f19",
+                        "primary": "#e6c364",
+                        "surface-bright": "#3d3931",
+                        "primary-container": "#c9a84c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#584400",
+                        "secondary": "#c5c6ca",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#35437e",
+                        "primary-fixed-dim": "#e6c364",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "secondary-fixed": "#e2e2e6",
+                        "outline": "#99907e",
+                        "secondary-container": "#47494d",
+                        "on-background": "#e9e1d7",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "surface-container-high": "#2d2a23",
+                        "inverse-primary": "#755b00",
+                        "background": "#16130d",
+                        "surface-container-low": "#1e1b15",
+                        "surface-variant": "#38342d",
+                        "on-surface": "#e9e1d7",
+                        "on-secondary-fixed": "#1a1c1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-edge": "64px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "section-gap": "160px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "h3": ["Space Grotesk"],
+                        "body-md": ["Manrope"],
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "h3": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "h1": ["72px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 169, 173, 0.1);
+        }
+
+        .glow-gold {
+            box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(30, 144, 255, 0.2);
+        }
+
+        .timeline-line {
+            background: linear-gradient(180deg, #C9A84C 0%, #1E90FF 50%, #C9A84C 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl border-b border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex justify-between items-center px-8 md:px-16 w-full h-20">
+        <div class="text-2xl font-black tracking-tighter text-white uppercase font-['Space_Grotesk']">Axeleron Expo
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+            <a class="font-['Space_Grotesk'] tracking-tight text-zinc-400 font-medium hover:text-white transition-all duration-300"
+                href="#">Tracks</a>
+            <a class="font-['Space_Grotesk'] tracking-tight text-[#C9A84C] font-bold border-b-2 border-[#C9A84C] pb-1"
+                href="#">Timeline</a>
+            <a class="font-['Space_Grotesk'] tracking-tight text-zinc-400 font-medium hover:text-white transition-all duration-300"
+                href="#">About</a>
+            <a class="font-['Space_Grotesk'] tracking-tight text-zinc-400 font-medium hover:text-white transition-all duration-300"
+                href="#">Rules</a>
+        </div>
+        <button
+            class="bg-[#C9A84C] text-black font-bold px-6 py-2 rounded-lg hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all duration-300 active:scale-95 transform font-['Space_Grotesk'] tracking-tight">
+            Register Now
+        </button>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative pt-40 pb-20 px-8 md:px-16 overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-l from-primary/20 to-transparent"></div>
+        </div>
+        <div class="max-w-container-max mx-auto relative z-10">
+            <div class="flex flex-col space-y-6">
+                <span class="font-label-caps text-primary uppercase tracking-[0.3em]">The Path to Excellence</span>
+                <h1 class="font-h1 text-h1 text-white max-w-4xl">Roadmap to the National Grand Finale</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Follow the journey of innovation as we scour the nation for the brightest minds. From regional
+                    screenings to the ultimate stage in January 2027.
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- Timeline Section -->
+    <main class="py-section-gap px-8 md:px-16 bg-[#0a0a0a]">
+        <div class="max-w-container-max mx-auto relative">
+            <!-- Vertical Line -->
+            <div
+                class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-px timeline-line opacity-30">
+            </div>
+            <div class="space-y-32">
+                <!-- Registration -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 text-left md:text-right">
+                        <div class="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                            <span class="font-label-caps text-primary">Ongoing</span>
+                        </div>
+                        <h3 class="font-h2 text-h2 text-white mb-2">Registration Opening</h3>
+                        <p class="font-body-md text-on-surface-variant">Global access to the Axeleron portal. Start your
+                            journey by submitting your vision for a smarter digital future. Early bird registrations
+                            gain exclusive workshop access.</p>
+                        <p class="font-h3 text-primary mt-4 font-bold">Oct 2025</p>
+                    </div>
+                    <div
+                        class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary glow-gold border-4 border-background z-20">
+                    </div>
+                    <div class="md:w-1/2 md:pl-16">
+                        <div
+                            class="glass-card p-8 rounded-xl border-l-4 border-primary transition-all duration-300 hover:scale-105">
+                            <span class="material-symbols-outlined text-primary text-4xl mb-4"
+                                data-icon="app_registration">app_registration</span>
+                            <p class="text-white/60 text-sm font-label-caps mb-2">Phase 01</p>
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tight">Identity Validation</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- State Level Trials -->
+                <div class="relative flex flex-col md:flex-row-reverse items-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pl-16 mb-8 md:mb-0">
+                        <div class="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 mb-4">
+                            <span class="font-label-caps text-secondary">Upcoming</span>
+                        </div>
+                        <h3 class="font-h2 text-h2 text-white mb-2">State Level Trials</h3>
+                        <p class="font-body-md text-on-surface-variant">Competitive screenings across 28 states. Top
+                            performers from each region advance to the high-stakes zonal elimination rounds.</p>
+                        <p class="font-h3 text-secondary mt-4 font-bold">March 2026</p>
+                    </div>
+                    <div
+                        class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-background z-20">
+                    </div>
+                    <div class="md:w-1/2 md:pr-16">
+                        <div
+                            class="glass-card p-8 rounded-xl border-r-4 border-secondary transition-all duration-300 hover:scale-105">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4"
+                                data-icon="account_balance">account_balance</span>
+                            <p class="text-white/60 text-sm font-label-caps mb-2">Phase 02</p>
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tight">Regional Dominance</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zonal Screenings -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 text-left md:text-right">
+                        <div class="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 mb-4">
+                            <span class="font-label-caps text-secondary">Upcoming</span>
+                        </div>
+                        <h3 class="font-h2 text-h2 text-white mb-2">Zonal Screenings</h3>
+                        <p class="font-body-md text-on-surface-variant">North, South, East, and West clusters meet in
+                            technological hubs. Rigorous evaluation by industry titans and national strategists.</p>
+                        <p class="font-h3 text-[#1E90FF] mt-4 font-bold">Sept 2026</p>
+                    </div>
+                    <div
+                        class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#1E90FF] glow-blue border-4 border-background z-20">
+                    </div>
+                    <div class="md:w-1/2 md:pl-16">
+                        <div
+                            class="glass-card p-8 rounded-xl border-l-4 border-[#1E90FF] transition-all duration-300 hover:scale-105">
+                            <span class="material-symbols-outlined text-[#1E90FF] text-4xl mb-4"
+                                data-icon="hub">hub</span>
+                            <p class="text-white/60 text-sm font-label-caps mb-2">Phase 03</p>
+                            <h4 class="text-xl font-bold text-white uppercase tracking-tight">Collaborative Friction
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grand Finale -->
+                <div class="relative flex flex-col md:flex-row-reverse items-start md:items-center w-full">
+                    <div class="md:w-1/2 md:pl-16 mb-8 md:mb-0">
+                        <div class="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                            <span class="font-label-caps text-primary">Milestone</span>
+                        </div>
+                        <h3 class="font-h2 text-h2 text-white mb-2">National Grand Finale</h3>
+                        <p class="font-body-md text-on-surface-variant">The pinnacle event. A multi-day expo showcasing
+                            the final 50 projects. National awards, venture funding, and government integration
+                            pathways.</p>
+                        <p class="font-h3 text-primary mt-4 font-bold">Jan 2027</p>
+                    </div>
+                    <div
+                        class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary glow-gold border-8 border-background z-20">
+                    </div>
+                    <div class="md:w-1/2 md:pr-16">
+                        <div class="relative overflow-hidden group">
+                            <img class="w-full h-64 object-cover rounded-xl transition-transform duration-700 group-hover:scale-110"
+                                data-alt="A grand cinematic view of a futuristic tech arena with massive holographic displays. The stage is bathed in golden light and electric blue highlights, creating a high-performance, premium atmosphere. Professionals are gathered around innovative 3D digital renders in a sleek, minimalist environment. The image evokes national ambition and high-fidelity technological advancement."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP1YNwYuyZFY21W0GPJYn4Huy9LJzm88pf2dJU326MsSgnimRlmzBaJUyXw57OWAuKRgEcAeOH6v_3W6jjhOVKhNRTiHNaialRz_R_MVAAAgjIsza0GOUR8tqZ8Es32VL9fuHBPIf2CMRXrE9h8NaEJx5tYUevw6ZgY2lvbdrb1PIGF9L8x6GFjYdKEpjvHV_SxIdx8gt8HpsRlp_unFY_D0Hd-sPqkSjXMOVHl55jbYtEK_qOiAriroUmfrVLXvH6QyVtGwwFmpYt" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                                <h4 class="text-2xl font-bold text-white font-h2">The Summit of Innovation</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Technical Specs CTA -->
+    <section class="py-section-gap px-8 md:px-16 border-y border-white/5 bg-surface">
+        <div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <h2 class="font-h2 text-h2 text-white">Prepare Your Technical Dossier</h2>
+                <p class="font-body-lg text-on-surface-variant">Submission requires high-fidelity prototypes and
+                    detailed technical architecture documents. View our resource hub to align your project with national
+                    standards.</p>
+                <div class="flex space-x-4">
+                    <button
+                        class="bg-primary text-black font-bold px-8 py-4 rounded hover:glow-gold transition-all duration-300 font-label-caps">Download
+                        Guidelines</button>
+                    <button
+                        class="bg-transparent border border-secondary text-secondary font-bold px-8 py-4 rounded hover:bg-secondary/10 transition-all duration-300 font-label-caps">View
+                        Sample Specs</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <p class="font-h3 text-primary">12</p>
+                    <p class="font-label-caps text-on-surface-variant">Key Milestones</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <p class="font-h3 text-secondary">450+</p>
+                    <p class="font-label-caps text-on-surface-variant">Regional Hubs</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <p class="font-h3 text-[#1E90FF]">1.2M</p>
+                    <p class="font-label-caps text-on-surface-variant">Grant Fund ($)</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center">
+                    <p class="font-h3 text-white">2027</p>
+                    <p class="font-label-caps text-on-surface-variant">Summit Year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer
+        class="w-full py-16 border-t border-zinc-800 bg-[#0a0a0a] flex flex-col items-center justify-center space-y-8 px-4 text-center">
+        <div class="text-lg font-bold text-white font-['Space_Grotesk']">Axeleron Expo</div>
+        <div class="flex flex-wrap justify-center gap-8">
+            <a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-zinc-500 hover:text-[#C9A84C] transition-colors"
+                href="#">Contact Info</a>
+            <a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-zinc-500 hover:text-[#C9A84C] transition-colors"
+                href="#">Privacy Policy</a>
+            <a class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-zinc-500 hover:text-[#C9A84C] transition-colors"
+                href="#">Innovation Challenge</a>
+        </div>
+        <div class="max-w-2xl mx-auto border-t border-white/5 pt-8">
+            <p class="font-['Space_Grotesk'] text-sm tracking-widest uppercase text-zinc-500">
+                © 2024 Axeleron Expo. Buddhimatta • Navachaar • Samriddhi • Behatar Bhavishya
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

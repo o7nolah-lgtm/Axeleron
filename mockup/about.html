@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Axeleron Expo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe08f",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#d0c5b2",
+                    "on-primary-container": "#503d00",
+                    "surface": "#16130d",
+                    "tertiary-container": "#9ba8eb",
+                    "tertiary": "#b9c4ff",
+                    "inverse-surface": "#e9e1d7",
+                    "on-tertiary-container": "#2e3b77",
+                    "surface-container-lowest": "#100e08",
+                    "on-secondary-container": "#b7b8bc",
+                    "tertiary-fixed": "#dde1ff",
+                    "surface-dim": "#16130d",
+                    "on-primary": "#3d2e00",
+                    "surface-container-highest": "#38342d",
+                    "on-secondary": "#2e3034",
+                    "on-tertiary-fixed": "#041451",
+                    "surface-tint": "#e6c364",
+                    "on-tertiary": "#1e2b66",
+                    "tertiary-fixed-dim": "#b9c3ff",
+                    "inverse-on-surface": "#343029",
+                    "outline-variant": "#4d4637",
+                    "surface-container": "#221f19",
+                    "primary": "#e6c364",
+                    "surface-container-bright": "#3d3931",
+                    "primary-container": "#c9a84c",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#584400",
+                    "secondary": "#c5c6ca",
+                    "error": "#ffb4ab",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#35437e",
+                    "primary-fixed-dim": "#e6c364",
+                    "secondary-fixed-dim": "#c5c6ca",
+                    "secondary-fixed": "#e2e2e6",
+                    "outline": "#99907e",
+                    "secondary-container": "#47494d",
+                    "on-background": "#e9e1d7",
+                    "on-secondary-fixed-variant": "#45474a",
+                    "surface-container-high": "#2d2a23",
+                    "inverse-primary": "#755b00",
+                    "background": "#16130d",
+                    "surface-container-low": "#1e1b15",
+                    "surface-variant": "#38342d",
+                    "on-surface": "#e9e1d7",
+                    "on-secondary-fixed": "#1a1c1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "section-gap": "160px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "h1": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "h3": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                    "h1": ["72px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "h2": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 169, 173, 0.1);
+        }
+        .energy-glow-gold:hover {
+            box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(180deg, #FFFFFF 0%, #C9A84C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl border-b border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex justify-between items-center px-8 md:px-16 w-full h-20">
+<div class="text-2xl font-black tracking-tighter text-white uppercase font-['Space_Grotesk']">Axeleron Expo</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-zinc-400 font-medium hover:text-white font-['Space_Grotesk'] tracking-tight" href="#">Tracks</a>
+<a class="text-zinc-400 font-medium hover:text-white font-['Space_Grotesk'] tracking-tight" href="#">Timeline</a>
+<a class="text-[#C9A84C] font-bold border-b-2 border-[#C9A84C] pb-1 font-['Space_Grotesk'] tracking-tight" href="#">About</a>
+<a class="text-zinc-400 font-medium hover:text-white font-['Space_Grotesk'] tracking-tight" href="#">Rules</a>
+</div>
+<button class="bg-[#C9A84C] text-black px-8 py-3 font-bold uppercase tracking-tighter active:scale-95 transform transition-transform hover:bg-[#C9A84C] hover:text-black hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all duration-300 font-['Space_Grotesk']">
+            Register Now
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 px-margin-edge overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic low-angle shot of a futuristic glass skyscraper reflecting a golden sunset in a hyper-modern city center. The lighting is dramatic and high-contrast, emphasizing the sleek metallic and glass textures of the architecture. The color palette is dominated by deep obsidian blacks and brilliant gold reflections, creating a premium and ambitious atmosphere consistent with a national movement for excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk4Eaib55LLm1pA1WWThSyTMOLWtI95m1DDNBLhJfLv_PHLU5wM8CH9oj-gllWRBaBuA9oY2lFsvaVd21YIVjKWwONJBGSUJZ1OisP9Q-v7lYWmOSfyW-j1I73wAC2qMj8MIlP7rvzxir0YaIqhCx1raV9u3Or6aWwBN1TXw3DEP1azj-druiThfwpkuIICTbbvZRUXGE1xorEjy3TYQtWRc0yg_6bASR4v-CcLRH0cUPyWOH6i4RW-hyN5N1P2i7RqsP5GwF_fx9Y"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label-caps text-primary-container mb-6 block uppercase tracking-[0.3em]">Engineering the Future</span>
+<h1 class="font-h1 text-h1 text-white mb-8">A Movement for <br/><span class="text-gradient-gold">National Excellence.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Axeleron Expo isn't just an event; it's a catalyst for India's technological renaissance. We bring together the brightest minds to solve the most pressing engineering challenges of our decade.
+                </p>
+</div>
+</section>
+<!-- The Brand Story -->
+<section class="py-section-gap px-margin-edge bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5">
+<h2 class="font-h2 text-h2 text-white mb-8">The Axeleron <br/>Philosophy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Born from the vision of pushing technical boundaries, Axeleron represents the "Acceleration" of innovation. We believe that true engineering excellence occurs at the intersection of rigorous science and creative intuition.
+                    </p>
+<p class="font-body-md text-body-md text-outline mb-10">
+                        Our mission is to create a high-fidelity ecosystem where student engineers, industry veterans, and national leaders collaborate to build the infrastructure of tomorrow.
+                    </p>
+<div class="flex gap-4">
+<div class="p-6 glass-card rounded-lg flex-1 border-l-4 border-primary">
+<span class="font-h3 text-h3 text-primary block mb-2">01</span>
+<span class="font-label-caps text-white">Innovation</span>
+</div>
+<div class="p-6 glass-card rounded-lg flex-1">
+<span class="font-h3 text-h3 text-white/20 block mb-2">02</span>
+<span class="font-label-caps text-white">Precision</span>
+</div>
+<div class="p-6 glass-card rounded-lg flex-1">
+<span class="font-h3 text-h3 text-white/20 block mb-2">03</span>
+<span class="font-label-caps text-white">Impact</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 relative">
+<div class="aspect-square glass-card rounded-full absolute -top-12 -left-12 w-64 h-64 border border-primary/20 blur-2xl opacity-30"></div>
+<img class="rounded-xl shadow-2xl relative z-10 w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A high-fidelity close-up of a precision-engineered robotic arm working on a complex circuit board. The environment is a sterile, high-tech laboratory with cool blue and warm gold accent lighting. The focus is sharp on the mechanical joints, suggesting high-performance technology and aerodynamic design, matching the Tesla-inspired innovation aesthetic of the Axeleron brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuzf8NcueNO2jydzqKZol1girspiCbfCTCUT5GO4FYG53dBx6rT01uIVdhgM4fve_26SAjK2AfFtCS68TNhXKbqjF3JcCI3O7S8XqVoy7V89X9WIcFT1FxPMqHNVl3oDjrsqTvCH6bWLg1lcOe3CqM1moj04WBqmd1JD3QD9KoRGhRx_4wnbamXM9qmfPQw6OBxzUlLReq4f_MkzFLA4HtBE7RU6uvaSFwAAkvYgiHzsOo7DpYIEycxZxPr9gKvaR9obvupaR8NTnA"/>
+</div>
+</div>
+</section>
+<!-- Mobialive Credibility -->
+<section class="py-section-gap px-margin-edge bg-surface-container-lowest relative overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<span class="font-label-caps text-tertiary mb-4 block uppercase">Powered by Expertise</span>
+<h2 class="font-h2 text-h2 text-white">Mobialive: Five Years of <br/>Curating Excellence</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Stat Card -->
+<div class="p-12 glass-card rounded-xl border-t-2 border-primary-container energy-glow-gold transition-all duration-500">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="verified">verified</span>
+<span class="font-h3 text-h3 text-white">5+ Years</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            A legacy of organizing Tier-1 national expositions with a focus on high-performance technical delivery and seamless user experience.
+                        </p>
+</div>
+<!-- Stat Card -->
+<div class="p-12 glass-card rounded-xl border-t-2 border-tertiary transition-all duration-500">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="groups">groups</span>
+<span class="font-h3 text-h3 text-white">50k+ Attendees</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Successfully bridging the gap between talent and industry through curated networking and high-stakes competitions.
+                        </p>
+</div>
+<!-- Stat Card -->
+<div class="p-12 glass-card rounded-xl border-t-2 border-primary-container energy-glow-gold transition-all duration-500">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="apartment">apartment</span>
+<span class="font-h3 text-h3 text-white">Iconic Venues</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            From international convention centers to elite tech parks, our footprint is defined by prestigious locations.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Prestigious Venues (Asymmetric Grid) -->
+<section class="py-section-gap px-margin-edge bg-background">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-stretch">
+<div class="md:col-span-7 h-[700px] relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A massive, wide-angle interior shot of the Bharat Mandapam convention center at night. The architecture features sweeping curves and a complex geometric glass facade illuminated with brilliant white and gold lighting. The mood is cinematic and prestigious, showcasing a world-class venue designed for national-scale innovation events." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGYwAqTC3YG9nBoTniJDCMWD58k5uTN5-gjUmDQ_CgLgzVoCs1QjmpoaqCShP0LwewrpPSjFi8suFFCDlzgtz5WD2wiX4ORhr_zOXcdMiu_xmfJ4OLk4Pjyu4GYIMgmi-V0d5RqFE9LpoTjJ0YQw45QsJLCJ2wjj2OjkK-WlXb8Ke6fpyB36mjw-aBZoH40agHvCUn9HGngvqqXRtLUxvRwe0uWd1VRG_sZpNIpWTqcSOZSpaWSWlOPUZq1rAlcilzaL1vEo6eWPmY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-12 left-12">
+<h3 class="font-h3 text-h3 text-white mb-2">Bharat Mandapam</h3>
+<p class="font-label-caps text-primary tracking-widest uppercase">Pragati Maidan, New Delhi</p>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="flex-1 relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A modern tech conference hall interior with minimalist furniture and high-end glassmorphic displays. The lighting is soft and ambient with electric blue neon strips running along the ceiling, suggesting a high-tech atmosphere typical of prestige venues like Yashobhumi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdvL2bVKgjIP_DSgzip-a1szLepiNlzMvP2kvvWbKZLcm9FwKj3TpFJvHBpI8Ukwi9uroiaqklXAsayG4YtKrfVFGgF92CIg_q30oRIrrsRRh-6w-kh0esMLgd_3ZdP0q33w5eQl91qjvlU506EceKkQv9mgfxVIqx7nWn6xf5xY4j_dzxIQ9UhGG9S1cZR4lGT6UHusTUnUW6yf88SicrLF3HIrQmf9W9G-6edgntw6IBaC0jMJywFCMjz70LYe6lIqJss6-xQcjg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-h3 text-[24px] text-white mb-1">Yashobhumi</h3>
+<p class="font-label-caps text-secondary text-[10px] tracking-widest uppercase">IICC, Dwarka</p>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-high p-12 rounded-xl border border-outline-variant flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="location_on">location_on</span>
+<h3 class="font-h3 text-h3 text-white mb-4">Setting the Stage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            We select venues that mirror our ambition. Spaces that are not just containers for people, but testaments to modern architectural excellence and engineering prowess.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-edge bg-surface-container-lowest text-center">
+<div class="max-w-3xl mx-auto glass-card p-16 rounded-2xl border-2 border-primary/10 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<h2 class="font-h2 text-h2 text-white mb-8 relative z-10">Be Part of the <br/>National Movement.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 relative z-10">
+                    Axeleron Expo 2024 is currently accepting registrations for the Innovation Challenge and technical tracks.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+<button class="bg-[#C9A84C] text-black px-10 py-4 font-bold uppercase tracking-tight energy-glow-gold transition-all duration-300 font-['Space_Grotesk']">
+                        Download Brochure
+                    </button>
+<button class="border border-outline text-white px-10 py-4 font-bold uppercase tracking-tight hover:bg-white hover:text-black transition-all duration-300 font-['Space_Grotesk']">
+                        Partner With Us
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 border-t border-zinc-800 bg-[#0a0a0a] flex flex-col items-center justify-center space-y-8 px-4 text-center">
+<div class="text-lg font-bold text-white font-['Space_Grotesk'] tracking-widest uppercase">Axeleron Expo</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16">
+<a class="text-zinc-500 hover:text-[#C9A84C] transition-colors font-['Space_Grotesk'] text-sm tracking-widest uppercase" href="#">Contact Info</a>
+<a class="text-zinc-500 hover:text-[#C9A84C] transition-colors font-['Space_Grotesk'] text-sm tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-[#C9A84C] transition-colors font-['Space_Grotesk'] text-sm tracking-widest uppercase" href="#">Innovation Challenge</a>
+</div>
+<div class="text-[#C9A84C] font-['Space_Grotesk'] text-sm tracking-widest uppercase">
+            © 2024 Axeleron Expo. Buddhimatta • Navachaar • Samriddhi • Behatar Bhavishya
+        </div>
+<button class="mt-8 text-zinc-500 hover:text-white transition-colors cursor-pointer flex flex-col items-center" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined mb-2" data-icon="keyboard_double_arrow_up">keyboard_double_arrow_up</span>
+<span class="font-label-caps text-[10px]">Back to top</span>
+</button>
+</footer>
+</body></html>
