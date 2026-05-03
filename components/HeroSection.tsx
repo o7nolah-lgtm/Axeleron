@@ -3,9 +3,9 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 
 /* ─── countdown ─── */
-const TARGET_DATE = new Date("2027-01-15T00:00:00");
+const TARGET_TS = Date.UTC(2027, 0, 1, 0, 0, 0); // Jan 1, 2027 00:00 UTC
 function getTimeLeft() {
-  const diff = TARGET_DATE.getTime() - Date.now();
+  const diff = TARGET_TS - Date.now();
   if (diff <= 0) return { days: 0, hours: 0, mins: 0, secs: 0 };
   return {
     days:  Math.floor(diff / 86_400_000),
