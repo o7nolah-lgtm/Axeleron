@@ -91,7 +91,7 @@ export default function Timeline() {
           {[
             { val: "12",   color: "text-primary",    label: "Key Milestones" },
             { val: "450+", color: "text-secondary",  label: "Regional Hubs"  },
-            { val: "1.2M", color: "text-[#1E90FF]",  label: "Grant Fund ($)" },
+            { val: "1.2M", color: "text-[#1E90FF]",  label: "Cash Prizes" },
             { val: "2027", color: "text-white",      label: "Summit Year"    },
           ].map((s) => (
             <div key={s.label} className="glass-card p-6 text-center">
