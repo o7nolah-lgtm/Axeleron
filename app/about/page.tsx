@@ -22,6 +22,8 @@ export default function AboutPage() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk4Eaib55LLm1pA1WWThSyTMOLWtI95m1DDNBLhJfLv_PHLU5wM8CH9oj-gllWRBaBuA9oY2lFsvaVd21YIVjKWwONJBGSUJZ1OisP9Q-v7lYWmOSfyW-j1I73wAC2qMj8MIlP7rvzxir0YaIqhCx1raV9u3Or6aWwBN1TXw3DEP1azj-druiThfwpkuIICTbbvZRUXGE1xorEjy3TYQtWRc0yg_6bASR4v-CcLRH0cUPyWOH6i4RW-hyN5N1P2i7RqsP5GwF_fx9Y"
             alt="Futuristic city architecture"
             fill
+            sizes="100vw"
+            quality={90}
             className="object-cover"
             priority
           />
@@ -187,9 +189,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
           <div className="md:col-span-7 h-[400px] md:h-[700px] relative group overflow-hidden rounded-xl">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGYwAqTC3YG9nBoTniJDCMWD58k5uTN5-gjUmDQ_CgLgzVoCs1QjmpoaqCShP0LwewrpPSjFi8suFFCDlzgtz5WD2wiX4ORhr_zOXcdMiu_xmfJ4OLk4Pjyu4GYIMgmi-V0d5RqFE9LpoTjJ0YQw45QsJLCJ2wjj2OjkK-WlXb8Ke6fpyB36mjw-aBZoH40agHvCUn9HGngvqqXRtLUxvRwe0uWd1VRG_sZpNIpWTqcSOZSpaWSWlOPUZq1rAlcilzaL1vEo6eWPmY"
+              src="/bharathmandapum.png"
               alt="Bharat Mandapam convention center"
               fill
+              sizes="(max-width: 768px) 100vw, 58vw"
+              quality={90}
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#16130d] via-transparent to-transparent opacity-90" />
@@ -205,9 +209,11 @@ export default function AboutPage() {
           <div className="md:col-span-5 flex flex-col gap-8">
             <div className="flex-1 relative group overflow-hidden rounded-xl min-h-[280px]">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdvL2bVKgjIP_DSgzip-a1szLepiNlzMvP2kvvWbKZLcm9FwKj3TpFJvHBpI8Ukwi9uroiaqklXAsayG4YtKrfVFGgF92CIg_q30oRIrrsRRh-6w-kh0esMLgd_3ZdP0q33w5eQl91qjvlU506EceKkQv9mgfxVIqx7nWn6xf5xY4j_dzxIQ9UhGG9S1cZR4lGT6UHusTUnUW6yf88SicrLF3HIrQmf9W9G-6edgntw6IBaC0jMJywFCMjz70LYe6lIqJss6-xQcjg"
+                src="/yasho.png"
                 alt="Yashobhumi conference hall"
                 fill
+                sizes="(max-width: 768px) 100vw, 42vw"
+                quality={90}
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#16130d]/80 to-transparent" />
