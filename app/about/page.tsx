@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About — Axeleron Expo 2027",
   description:
-    "Learn about Axeleron Expo — India's national AI & Robotics Innovation Challenge powered by Mobialive.",
+    "Learn about Axeleron Expo — India's national AI & Robotics Innovation Challenge organised by Urjionix & Mobialive, backed by TSSC.",
 };
 
 export default function AboutPage() {
@@ -109,8 +109,8 @@ export default function AboutPage() {
               Powered by Expertise
             </span>
             <h2 className="font-[var(--font-space-grotesk)] text-3xl md:text-[48px] font-bold tracking-[-0.02em] leading-[1.1] text-white">
-              Mobialive: Five Years of <br />
-              Curating Excellence
+              Urjionix &amp; Mobialive: <br />
+              Five Years of Curating Excellence
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">

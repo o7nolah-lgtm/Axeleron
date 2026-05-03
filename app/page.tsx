@@ -159,7 +159,7 @@ export default function Home() {
                   National Credibility
                 </h4>
                 <p className="text-[#d0c5b2] text-sm font-manrope">
-                  Strategic partners with Mobialive.
+                  Organised by Urjionix&nbsp;•&nbsp;Mobialive
                 </p>
               </div>
             </div>

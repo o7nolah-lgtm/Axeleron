@@ -2,85 +2,218 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ════════════════════════════════════════════════
+   BASE
+════════════════════════════════════════════════ */
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
+    /* OLED-black base per brand spec */
     background-color: #0a0a0a;
     color: #e9e1d7;
     overflow-x: hidden;
+    font-family: var(--font-manrope), Manrope, sans-serif;
+  }
+
+  ::selection {
+    background-color: #c9a84c;
+    color: #241a00;
   }
 }
 
-@layer utilities {
+/* ════════════════════════════════════════════════
+   COMPONENT CLASSES
+════════════════════════════════════════════════ */
+@layer components {
+
+  /* ── Glassmorphism card ──────────────────────
+     Surface: #141414 + 1px Silver→transparent border
+     Hover: border pulses Gold/Blue, blur intensifies
+  ─────────────────────────────────────────────── */
   .glass-card {
-    background: rgba(20, 20, 20, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(168, 169, 173, 0.1);
+    background: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid;
+    border-image: linear-gradient(
+      135deg,
+      rgba(197,198,202,0.18) 0%,
+      rgba(197,198,202,0.04) 100%
+    ) 1;
+    /* fallback for border-image + border-radius */
+    border-color: rgba(197,198,202,0.12);
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .glow-gold {
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  .glass-card:hover {
+    border-color: rgba(201,168,76,0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
-  .glow-gold:hover {
-    box-shadow: 0 0 25px rgba(201, 168, 76, 0.4);
-    border-color: #C9A84C;
+  /* ── Primary button ──────────────────────────
+     Gold gradient at 165° per spec, glow + scale on hover
+  ─────────────────────────────────────────────── */
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(165deg, #e6c364 0%, #c9a84c 100%);
+    color: #241a00;
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 18px 56px;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 0 30px rgba(201,168,76,0.18);
   }
 
+  .btn-primary:hover {
+    box-shadow: 0 0 40px rgba(201,168,76,0.5);
+    transform: scale(1.03);
+  }
+
+  .btn-primary:active { transform: scale(0.97); }
+
+  /* ── Secondary / ghost button ───────────────── */
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #c5c6ca;
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 17px 48px;
+    border: 1px solid rgba(197,198,202,0.35);
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(30,144,255,0.6);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(30,144,255,0.25);
+  }
+
+  /* ── Label caps ─────────────────────────────── */
+  .label-caps {
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section divider ────────────────────────── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(77,70,55,0.6) 30%,
+      rgba(77,70,55,0.6) 70%,
+      transparent 100%
+    );
+  }
+
+  /* ── Chip / badge ───────────────────────────── */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    background: rgba(197,198,202,0.08);
+    border: 1px solid rgba(197,198,202,0.15);
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c5c6ca;
+  }
+}
+
+/* ════════════════════════════════════════════════
+   UTILITY OVERRIDES
+════════════════════════════════════════════════ */
+@layer utilities {
+
+  /* Gold gradient helper */
   .gradient-gold {
-    background: linear-gradient(165deg, #e6c364 0%, #C9A84C 100%);
+    background: linear-gradient(165deg, #e6c364 0%, #c9a84c 100%);
   }
 
-  .blue-leak {
-    background: radial-gradient(circle at center, rgba(30, 144, 255, 0.15) 0%, transparent 70%);
-  }
-
+  /* Text gradient */
   .text-gradient-gold {
-    background: linear-gradient(180deg, #ffffff 0%, #C9A84C 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #c9a84c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
+  /* Energy glow utilities */
+  .glow-gold       { box-shadow: 0 0 20px rgba(201,168,76,0.4); }
+  .glow-gold-lg    { box-shadow: 0 0 40px rgba(201,168,76,0.5); }
+  .glow-blue       { box-shadow: 0 0 20px rgba(30,144,255,0.4); }
+  .glow-blue-lg    { box-shadow: 0 0 40px rgba(30,144,255,0.5); }
+
+  /* Hover glow */
+  .hover\:glow-gold:hover    { box-shadow: 0 0 25px rgba(201,168,76,0.45); }
+  .hover\:glow-blue:hover    { box-shadow: 0 0 25px rgba(30,144,255,0.45); }
+
+  /* Timeline gradient line */
   .timeline-line {
-    background: linear-gradient(180deg, #C9A84C 0%, #1E90FF 50%, #C9A84C 100%);
+    background: linear-gradient(180deg, #c9a84c 0%, #1e90ff 50%, #c9a84c 100%);
   }
 
-  .energy-glow-gold:hover {
-    box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+  /* Blue radial leak */
+  .blue-leak {
+    background: radial-gradient(circle at center, rgba(30,144,255,0.12) 0%, transparent 70%);
+  }
+
+  /* Electric blue progress bar */
+  .progress-bar {
+    height: 2px;
+    background: #1E90FF;
+    box-shadow: 0 0 8px rgba(30,144,255,0.7);
+  }
+
+  /* Scroll indicator neon line */
+  .neon-blue {
+    background: #1E90FF;
+    box-shadow: 0 0 10px rgba(30,144,255,0.8), 0 0 20px rgba(30,144,255,0.4);
   }
 }
 
-/* ── Aurora floating orbs ──
-   Large translate values so movement is visible through the heavy blur.
-   translateZ(0) on each orb forces a GPU compositing layer → no banding.
-*/
+/* ════════════════════════════════════════════════
+   AURORA CANVAS ANIMATIONS
+════════════════════════════════════════════════ */
 @keyframes aurora1 {
-  0%, 100% { transform: translateZ(0) translate(0px,   0px)   scale(1);    }
-  25%       { transform: translateZ(0) translate(80px, -110px) scale(1.15); }
-  55%       { transform: translateZ(0) translate(-70px, 75px)  scale(0.9);  }
-  80%       { transform: translateZ(0) translate(40px,  -30px) scale(1.05); }
+  0%, 100% { transform: translateZ(0) translate(0px,    0px)    scale(1);    }
+  25%       { transform: translateZ(0) translate(80px, -110px)  scale(1.15); }
+  55%       { transform: translateZ(0) translate(-70px,  75px)  scale(0.9);  }
+  80%       { transform: translateZ(0) translate(40px,  -30px)  scale(1.05); }
 }
-
 @keyframes aurora2 {
-  0%, 100% { transform: translateZ(0) translate(0px,    0px)   scale(1);    }
-  30%       { transform: translateZ(0) translate(-90px,  60px)  scale(1.12); }
-  65%       { transform: translateZ(0) translate(70px,  -90px)  scale(0.88); }
-  85%       { transform: translateZ(0) translate(-25px,  30px)  scale(1.06); }
-}
-
-@keyframes aurora3 {
   0%, 100% { transform: translateZ(0) translate(0px,   0px)    scale(1);    }
+  30%       { transform: translateZ(0) translate(-90px, 60px)  scale(1.12); }
+  65%       { transform: translateZ(0) translate(70px, -90px)  scale(0.88); }
+  85%       { transform: translateZ(0) translate(-25px, 30px)  scale(1.06); }
+}
+@keyframes aurora3 {
+  0%, 100% { transform: translateZ(0) translate(0px,    0px)   scale(1);    }
   40%       { transform: translateZ(0) translate(110px,-65px)  scale(1.2);  }
   70%       { transform: translateZ(0) translate(-80px, 50px)  scale(0.85); }
 }
-
 @keyframes aurora4 {
-  0%, 100% { transform: translateZ(0) translate(0px,   0px)    scale(1);   opacity: 0.7; }
+  0%, 100% { transform: translateZ(0) translate(0px,   0px)    scale(1);    opacity: 0.7; }
   50%       { transform: translateZ(0) translate(-100px,-80px) scale(1.28); opacity: 1;   }
 }
 

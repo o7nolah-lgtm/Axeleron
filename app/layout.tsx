@@ -25,7 +25,9 @@ export const metadata: Metadata = {
     "AI Innovation Challenge",
     "Robotics Competition",
     "Engineering Students India",
+    "Urjionix",
     "Mobialive",
+    "TSSC",
   ],
 };
 

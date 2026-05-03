@@ -1,68 +1,44 @@
 const tracks = [
-  {
-    icon: "psychology",
-    title: "Machine Learning",
-    desc: "Deep neural networks and generative AI systems shaping the future.",
-  },
-  {
-    icon: "precision_manufacturing",
-    title: "Robotics & Automation",
-    desc: "Autonomous machines and advanced sensory feedback loops.",
-  },
-  {
-    icon: "hub",
-    title: "Quantum Technology",
-    desc: "Harnessing subatomic phenomena for extreme computation.",
-  },
-  {
-    icon: "health_metrics",
-    title: "Biotech & Health",
-    desc: "Engineering biology for sustainable and resilient longevity.",
-  },
-  {
-    icon: "trending_up",
-    title: "Financial Growth",
-    desc: "DeFi architectures and algorithmic economic forecasting.",
-  },
+  { icon: "psychology",             title: "Machine Learning",     desc: "Deep neural networks and generative AI systems shaping the future." },
+  { icon: "precision_manufacturing",title: "Robotics & Automation",desc: "Autonomous machines and advanced sensory feedback loops." },
+  { icon: "hub",                    title: "Quantum Technology",   desc: "Harnessing subatomic phenomena for extreme computation." },
+  { icon: "health_metrics",         title: "Biotech & Health",     desc: "Engineering biology for sustainable and resilient longevity." },
+  { icon: "trending_up",            title: "Financial Growth",     desc: "DeFi architectures and algorithmic economic forecasting." },
 ];
 
 export default function DomainTracks() {
   return (
-    <section
-      id="tracks"
-      className="py-24 md:py-[160px] px-6 md:px-16 bg-[#100e08]"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="tracks" className="py-section-gap px-6 md:px-margin-edge bg-surface-container-lowest">
+      <div className="max-w-[1440px] mx-auto">
+
         {/* Header */}
-        <div className="mb-16 md:mb-20 text-center">
-          <p className="font-[var(--font-space-grotesk)] text-[#e6c364] text-[12px] tracking-[0.2em] uppercase font-bold mb-4">
-            Innovation Frontiers
-          </p>
-          <h2 className="font-[var(--font-space-grotesk)] text-3xl md:text-[48px] font-bold tracking-[-0.02em] leading-[1.1] text-[#e9e1d7]">
+        <div className="mb-20 text-center">
+          <p className="label-caps text-primary mb-4">Innovation Frontiers</p>
+          <h2 className="font-space-grotesk text-h2 text-on-surface">
             Explore Global Tracks
           </h2>
         </div>
 
-        {/* Track Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-          {tracks.map((track) => (
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-gutter">
+          {tracks.map((t) => (
             <div
-              key={track.title}
-              className="glass-card p-8 group hover:bg-[#221f19] transition-all duration-500 glow-gold cursor-default"
+              key={t.title}
+              className="glass-card p-8 hover:bg-surface-container transition-all duration-500 cursor-default group"
             >
               <div className="mb-6">
                 <span
-                  className="material-symbols-outlined text-[#e6c364] text-5xl"
+                  className="material-symbols-outlined text-primary text-5xl"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
-                  {track.icon}
+                  {t.icon}
                 </span>
               </div>
-              <h3 className="font-[var(--font-space-grotesk)] text-xl font-semibold mb-4 text-white leading-snug">
-                {track.title}
+              <h3 className="font-space-grotesk font-semibold text-xl text-white mb-3 leading-snug">
+                {t.title}
               </h3>
-              <p className="text-[#d0c5b2] font-manrope text-sm leading-relaxed">
-                {track.desc}
+              <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">
+                {t.desc}
               </p>
             </div>
           ))}
