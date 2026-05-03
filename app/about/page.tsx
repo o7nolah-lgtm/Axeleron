@@ -189,7 +189,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
           <div className="md:col-span-7 h-[400px] md:h-[700px] relative group overflow-hidden rounded-xl">
             <Image
-              src="/bharathmandapum.png"
+              src="/bharathmandapum.webp"
               alt="Bharat Mandapam convention center"
               fill
               sizes="(max-width: 768px) 100vw, 58vw"
@@ -209,7 +209,7 @@ export default function AboutPage() {
           <div className="md:col-span-5 flex flex-col gap-8">
             <div className="flex-1 relative group overflow-hidden rounded-xl min-h-[280px]">
               <Image
-                src="/yasho.png"
+                src="/yasho.webp"
                 alt="Yashobhumi conference hall"
                 fill
                 sizes="(max-width: 768px) 100vw, 42vw"
