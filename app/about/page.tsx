@@ -15,9 +15,8 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center pt-20 px-6 md:px-16 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-32 px-6 md:px-16 overflow-hidden -mt-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#16130d]/80 to-[#16130d]" />
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk4Eaib55LLm1pA1WWThSyTMOLWtI95m1DDNBLhJfLv_PHLU5wM8CH9oj-gllWRBaBuA9oY2lFsvaVd21YIVjKWwONJBGSUJZ1OisP9Q-v7lYWmOSfyW-j1I73wAC2qMj8MIlP7rvzxir0YaIqhCx1raV9u3Or6aWwBN1TXw3DEP1azj-druiThfwpkuIICTbbvZRUXGE1xorEjy3TYQtWRc0yg_6bASR4v-CcLRH0cUPyWOH6i4RW-hyN5N1P2i7RqsP5GwF_fx9Y"
             alt="Futuristic city architecture"
@@ -25,6 +24,7 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#16130d]/80 to-[#16130d]" />
         </div>
         <div className="relative z-10 max-w-4xl">
           <span className="font-[var(--font-space-grotesk)] text-[#C9A84C] text-[11px] tracking-[0.3em] uppercase font-bold mb-6 block">
